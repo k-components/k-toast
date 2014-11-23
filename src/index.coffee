@@ -1,9 +1,9 @@
-racer = require('racer')
+racer = require('k-model')
 Model = racer.Model
 
 class Toast
 
-	view: __dirname + '/derby-ui-toast.html'	
+	view: __dirname + '/k-toast.html'	
 
 	defaultOptions =
 		sticky: false

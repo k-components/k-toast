@@ -1,4 +1,0 @@
-<index:>
-	<div class="toast-container">
-	    {{each #root._page.toast as #toast, #i}}<div on-click="remove(#i)" class="toast toast-{{#toast.type}}"><span>{{unescaped #toast.msg}}</span></div>{{/each}}
-	</div>
