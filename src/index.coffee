@@ -7,7 +7,7 @@ class Toast
 
 	defaultOptions =
 		sticky: false
-		timeout: 5000
+		timeout: 10000
 
 	Model::toast = (type, msg, options) ->
 		# support also function signature toast({ error: 'error message' }, options})
