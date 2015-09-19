@@ -107,3 +107,7 @@ model.toast({ info: 'Info message' });
 
 Messages will disappear in 5 seconds by default. They can also be removed by clicking the message dialog box.
 
+
+### Caveats
+
+When the toast is added server side it won't be removed by the timeout. This may change in the future.
