@@ -1,5 +1,6 @@
 racer = require('k-model')
 Model = racer.Model
+isServer = racer.util.isServer
 
 class Toast
 
@@ -10,6 +11,7 @@ class Toast
 		timeout: 10000
 
 	Model::toast = (type, msg, options) ->
+
 		# support also function signature toast({ error: 'error message' }, options})
 		if typeof type is 'object'
 			options = msg
@@ -26,6 +28,10 @@ class Toast
 			msg: msg
 
 		toast.click = options.click if options?.click
+
+		if isServer
+			@root.set '_page.isServer', true
+			@root.set '_page.timeout', timeout
 
 		remove = =>
 			toasts = @root.get('_page.toast')
