@@ -1,0 +1,20 @@
+.toast-container .toast span:before {
+	display: inline-block;
+	font-family: Ionicons;
+	font-size: 26px;
+	line-height: 26px;
+	vertical-align: middle;
+	margin-right: 8px;
+}	
+.toast-container .toast.toast-info span:before {
+	content: "\f149";
+}
+.toast-container .toast.toast-success span:before {
+	content: "\f375";
+}
+.toast-container .toast.toast-warning span:before {
+	content: "\f100";
+}
+.toast-container .toast.toast-error span:before {
+	content: "\f34a";
+}
