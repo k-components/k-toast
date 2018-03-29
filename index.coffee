@@ -4,7 +4,8 @@ isServer = racer.util.isServer
 
 class Toast
 
-	view: __dirname + '/k-toast.html'	
+	view: __dirname
+	name: 'k-toast'
 
 	defaultOptions =
 		sticky: false
