@@ -1,4 +1,4 @@
-.toast-container .toast span:before {
+.toast-container .toast span.toast-icon:before {
 	display: inline-block;
 	font-family: Ionicons;
 	font-size: 26px;
@@ -6,15 +6,15 @@
 	vertical-align: middle;
 	margin-right: 8px;
 }	
-.toast-container .toast.toast-info span:before {
+.toast-container .toast.toast-info span.toast-icon:before {
 	content: "\f149";
 }
-.toast-container .toast.toast-success span:before {
+.toast-container .toast.toast-success span.toast-icon:before {
 	content: "\f375";
 }
-.toast-container .toast.toast-warning span:before {
+.toast-container .toast.toast-warning span.toast-icon:before {
 	content: "\f100";
 }
-.toast-container .toast.toast-error span:before {
+.toast-container .toast.toast-error span.toast-icon:before {
 	content: "\f34a";
 }

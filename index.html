@@ -1,11 +1,18 @@
 <index:>
 	<div class="toast-container">
-	    {{each #root._page.toast as #toast, #i}}<div id="k-toast-{{#toast.id}}" on-click="remove(#i)" class="toast toast-{{#toast.type}}"><span>{{unescaped #toast.msg}}</span></div>{{/each}}
+	    {{each #root._page.toast as #toast, #i}}
+	    	<div id="k-toast-{{#toast.id}}" on-click="remove(#i)" class="toast toast-{{#toast.type}}">
+		    	<span class="toast-inner">
+			    	<span class="toast-icon"></span>
+			    	<span>{{unescaped #toast.msg}}</span>
+		    	</span>
+		    </div>
+	    {{/each}}
 	</div>
 	{{if #root._page.isServer}}
-	<script type="text/javascript">
-	{{each #root._page.toast as #toast, #i}}
-		setTimeout(function() { var el = document.getElementById('k-toast-{{#toast.id}}'); if (el) el.parentNode.removeChild(el); }, {{#root._page.timeout}});
-	{{/}}
-	</script>
+		<script type="text/javascript">
+			{{each #root._page.toast as #toast, #i}}
+				setTimeout(function() { var el = document.getElementById('k-toast-{{#toast.id}}'); if (el) el.parentNode.removeChild(el); }, {{#root._page.timeout}});
+			{{/}}
+		</script>
 	{{/}}
